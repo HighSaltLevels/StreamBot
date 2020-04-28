@@ -18,7 +18,7 @@ async def on_ready():
 @client.event
 async def on_message(msg):
     if msg.author != client.user:
-        response = msg_parser.parse_message(client, msg)
+        response = await msg_parser.parse_message(client, msg)
         await client.send_message(msg.channel, response)
 
 try:

@@ -49,4 +49,8 @@ def get_user_videos(author):
     for name in user_data_dict[author]:
         msg += f'{name} -> {user_data_dict[author][name]}\n'
     return msg + '```'
-        
+
+def get_user_video_by_name(author, name):
+    user_data_dict = _load_user_data()
+    url = user_data_dict[author][name]
+    return url
